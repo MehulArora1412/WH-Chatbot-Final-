@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mehul Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+        background-color: #000000;
+        font-family: Arial, sans-serif;
+      }
+
+      .center-div {
+        width: 50vw;
+        height: 80vh;
+        background-color: white;
+        border-radius: 15px;
+        padding: 5px;
+        box-sizing: border-box;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .center-div {
+          height: 40vh;
+          width: 80vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p style="text-align: center;"></p>
+      <div class="center-div">
+        <iframe
+          style="border: none; width: 100%; height: 100%;"
+          srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+          <script>
+            window.botpressWebChat.init({
+                'composerPlaceholder': 'Talk to me',
+                'botConversationDescription': 'Made by Mehul Arora',
+                'botName': 'W&H Chatbot',
+                'botId': '9f837e37-8ca9-432a-a22f-711641fbf69b',
+                'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                'messagingUrl': 'https://messaging.botpress.cloud',
+                'clientId': '9f837e37-8ca9-432a-a22f-711641fbf69b',
+                'enableConversationDeletion': true,
+                'showPoweredBy': false,
+                'className': 'webchatIframe',
+                'containerWidth': '100%25',
+                'layoutWidth': '100%25',
+                'hideWidget': true,
+                'showCloseButton': false,
+                'disableAnimations': false,
+                'closeOnEscape': false,
+                'showConversationsButton': false,
+                'enableTranscriptDownload': false,
+                'stylesheet':'https://webchat-styler-css.botpress.app/prod/22de3ee9-4a50-41da-987d-3fc97bcc68bd/v25423/style.css'
+                
+            });
+          window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+          </script></body>"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
